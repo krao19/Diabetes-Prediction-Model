@@ -37,8 +37,11 @@ We also tried using oversampling techinques like SMOTE to balance the data, but 
 
 
 ## Model Building
-r
-
+Starting off with Logistic Regression we applied different algorithms like SVM, Decision Tree and Random Forest.
+Initially, we got an accuracy and f1 score of 100% with the algorithms. We realised that the presence of Insulin as a feature, which had high correlation with the target was causing overfitting. 
+On removal of “Insulin” as a feature, the metrics dropped down to reasonable values. Our baseline model had an accuracy of 77% and F1 score at 80%. 
+With Random Forest, we tuned the hyperparameters using Randomised Search and found the best parameters for our final model.
+With the accuracy at 81% and F1 score at 86%, and with the bias of data being at 74%, the model is decently successful.
 
 ## Feature Engineering
 We tried to build and incorporate new features into our model but were unable to increase the perfomance metrics substantially. Also, in somecases, the metrics got worsened.
